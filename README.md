@@ -14,6 +14,7 @@ Esta atividade prática consiste em uma API desenvolvida em Django Rest Framewor
 
 ## Domínio da API na AWS
 [http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/]
+
 O login do admin não vai funcionar na nuvem, apenas rodando localmente
 - Para navegação das páginas temos:
 - admin: [http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/admin/login/?next=/admin/]
