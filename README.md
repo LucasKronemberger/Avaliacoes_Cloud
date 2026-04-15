@@ -13,7 +13,13 @@ AP1 - 15/05/2026 ✅
 Esta atividade prática consiste em uma API desenvolvida em Django Rest Framework, com deploy automatizado na AWS Elastic Beanstalk.
 
 ## Domínio da API na AWS
-[]
+[http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/]
+O login do admin não vai funcionar na nuvem, apenas rodando localmente
+Para navegação das páginas temos:
+admin: [http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/admin/login/?next=/admin/]
+api: [http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/api/]
+api produtos:["http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/api/produtos/"]
+api categorias: [http://catalogo-produtos-env-2.eba-bis2mpaw.us-east-1.elasticbeanstalk.com/api/categorias/]
 
 ## Tecnologias Utilizadas
 - Python 3.14.3 / Django 6.0
@@ -31,6 +37,8 @@ Esta atividade prática consiste em uma API desenvolvida em Django Rest Framewor
 6. Execute as migrações: 'python manage.py migrate'
 7. Inicie o servidor: 'python manage.py runserver'
 8. Para acessar painel do admin o login e senha sao os mesmos: 'admin'
+
+Para navegar entre as páginas da api é só colocar no final da url /admin ou /api ou /api/produtos ou /api/categorias
 
 ## Detalhes do Deploy na AWS
 
