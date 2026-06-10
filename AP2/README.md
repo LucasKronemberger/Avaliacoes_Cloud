@@ -14,28 +14,6 @@ Produto (imagem local)    →      Produto + Seleção + Pedido + ItemPedido
 Deploy no EB                     Imagens/bandeiras no S3
                                  Deploy no EB com RDS + S3 integrados
 ```
-
-### Diagrama de infraestrutura
-
-```
-Internet
-   │
-   ▼
-┌──────────────────────┐
-│  Elastic Beanstalk   │  ← app.zip (gunicorn + Django)
-│  EC2 Auto Scaling    │
-└──────────┬───────────┘
-           │
-     ┌─────┴─────┐
-     │           │
-     ▼           ▼
-┌─────────┐  ┌──────────┐
-│  RDS    │  │   S3     │
-│  MySQL  │  │  Bucket  │
-│ (dados) │  │ (mídia)  │
-└─────────┘  └──────────┘
-```
-
 ---
 
 ## Modelos de dados
@@ -117,8 +95,6 @@ O admin em `http://localhost:8000/admin/`
 
 ### Pré-requisitos AWS
 - Conta AWS com permissões em EB, RDS, S3 e IAM
-- AWS CLI instalado e configurado (`aws configure`)
-- EB CLI instalado (`pip install awsebcli`)
 
 ---
 
@@ -236,7 +212,7 @@ Login: **root** / (senha definida em `DJANGO_ADMIN_PASSWORD`)
 
 ## Link da API em produção
 
-> 🔗 **http://<SEU-EB-URL>.elasticbeanstalk.com/api/**
+>  **http://copa2026-api-env.eba-cineg8y7.us-east-1.elasticbeanstalk.com/api/**
 
 ---
 
@@ -275,10 +251,3 @@ Login: **root** / (senha definida em `DJANGO_ADMIN_PASSWORD`)
 | `502 Bad Gateway` | App não iniciou | Veja `/var/log/web.stdout.log` via `eb logs` |
 
 ---
-
-## Referências
-
-- [Django REST Framework](https://www.django-rest-framework.org/)
-- [Deploy Django no Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html)
-- [Amazon RDS MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html)
-- [django-storages S3](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html)
