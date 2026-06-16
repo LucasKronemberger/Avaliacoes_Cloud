@@ -1,4 +1,4 @@
-# 🏆 Copa do Mundo 2026 — API E-commerce
+# Copa do Mundo 2026 — API E-commerce
 
 API REST para um e-commerce temático da Copa do Mundo 2026. Construída com **Django REST Framework**, banco de dados **MySQL no AWS RDS**, mídia no **AWS S3** e deploy no **AWS Elastic Beanstalk**.
 
